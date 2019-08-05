@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="contents-create">
+      <%= form_for @question do |f| %>
+      <div class="contents-create__title">
+        <h1>問題作成</h1>
+      </div>
+      <div class="contents-create__field">
+        <div class="contents-create__field__label">
+          <%= f.label :"問題" %><br />
+        </div>
+        <div class="contents-create__field__text">
+          <%= f.text_field :title, class: "contents-create__field__text__t" %><br />
+        </div>
+        <% 3.times do |times| %>
+          <%= f.fields_for :answers, "answers[]" do |a| %>
+            <div class="contents-create__field__label">
+              <%= a.label :"選択肢#{times+1}" %><br />
+            </div>
+            <div class="contents-create__field__input">
+              <div class="contents-create__field__input__text">
+                <%= a.text_field :answer, class: "contents-create__field__input__text__t" %><br />
+              </div>
+              <div class="contents-create__field__input__check">
+                <%= a.radio_button :correct, "正解", class: "contents-create__field__input__check__c" %>
+                <%= a.label :"正解", class: "contents-create__field__input__check__l" %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <div class="contents-create__field__genre">
+          <%= f.label :"ジャンル", class: "contents-create__field__genre__label" %><br />
+          <%= f.collection_select :genre_id, @genre, :id, :name, class: "contents-create__field__genre__g" %>
+        </div>
+        <div class="contents-create__field__btn">
+          <%= f.submit "作成する", class:"contents-create__field__btn__b" %>
+        </div>
+      </div>
+      <% end %>
+      <div class="contents-create__link">
+        <%= link_to "クイズ一覧に戻る", questions_path, class: "header__right__list__sign__btn" %>
+      </div>
+    </div>
+  </div>
+</div>

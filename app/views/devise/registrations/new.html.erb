@@ -1,0 +1,56 @@
+<div class="account-page" id="account-page">
+  <div class="account-page__inner clearfix">
+    <div class="account-page__inner--left account-page__header">
+      <h2>新規アカウントの作成</h2>
+      <%= render "devise/shared/links" %>
+    </div>
+    <div class="account-page__inner--right user-form">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <div class="field-label">
+            <%= f.label :"名前"%><br />
+          </div>
+          <div class="field-input">
+            <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">
+            <%= f.label :email%><br />
+          </div>
+          <div class="field-input">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">
+            <%= f.label :"パスワード" %>
+            <% if @minimum_password_length %>
+            <em>(英数字含む6文字以上)</em>
+            <% end %><br />
+          </div>
+          <div class="field-input">
+            <%= f.password_field :password, autocomplete: "new-password" %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">
+            <%= f.label :"確認用パスワード" %><br />
+          </div>
+          <div class="field-input">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "アカウントを作成する", class: "btn"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

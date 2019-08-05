@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="user-content">
+    <div class="user-content__name">
+      <%= @user.name %>
+    </div>
+    <div class="user-content__index">
+      <h1>作成したクイズ一覧</h1>
+    </div>
+    <% @questions.each do |question| %>
+      <div class="user-content__questions">
+        <%= render partial: "question", locals: { question: question } %>
+      </div>
+    <% end %>
+    <div class="user-content__page">
+      <%= paginate(@questions) %>
+    </div>
+  </div>
+</div>
