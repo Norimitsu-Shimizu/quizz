@@ -1,0 +1,17 @@
+.wrapper
+  .container
+    .question
+      .question__tit
+        %h1 問題
+      .question__title
+        = @question.title
+      .question__ans
+        %h1 解答
+    .question__answer
+      - @answers.each do |answer|
+        .question__answer__ans{ data: "#{answer.correct}"}
+          = answer.answer
+      .question__answer__bg
+      .question__answer__icon
+    .question__footer
+      = link_to "クイズ一覧に戻る", questions_path, class: "question__footer__quiz"

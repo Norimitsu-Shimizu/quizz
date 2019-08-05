@@ -1,0 +1,22 @@
+.wrapper
+  .container
+    .contents-left
+      .contents-left__header
+        %h2.contents-left__header__title Quizzzzz
+        %p.contents-left__header__text.contents-left__header__size クイズに答えて自分の知識のレベルをあげよう!
+        %p.contents-left__header__size 自分でクイズを作ることもできるよ!
+      .contents-left__icon
+        = image_tag("プレゼンテーション2.png", size: "300x300")
+        = image_tag("study.png", size: "300x300")
+    .contents-right
+      .contents-right__header
+        %h2.contents-right__header__title Purpose
+        %p.contents-right__header__text.contents-right__header__size クイズを解くことで学習することの楽しみを
+        %p.contents-right__header__size 体験して、学習意欲を高めていきます。
+      .contents-right__icon
+        = image_tag("歓喜のポーズ5.png", size: "300x300")
+        = image_tag("バンザイ1.png", size: "300x300")
+    .contents-last
+      = link_to "スタート!", questions_path, class:"contents-last__first"
+      - unless user_signed_in?
+        = link_to "新規登録", new_user_registration_path, class:"contents-last__second"

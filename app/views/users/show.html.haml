@@ -1,0 +1,11 @@
+.wrapper
+  .user-content
+    .user-content__name
+      = @user.name
+    .user-content__index
+      %h1 作成したクイズ一覧
+    - @questions.each do |question|
+      .user-content__questions
+        = render partial: "question", locals: { question: question }
+    .user-content__page
+      = paginate(@questions)
