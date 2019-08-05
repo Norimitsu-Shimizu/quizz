@@ -1,0 +1,9 @@
+.wrapper
+  .container
+    - if user_signed_in?
+      .contents-new
+        = link_to "クイズを作成する", new_question_path, class: "contents-new__question"
+    - @questions.each do |question|
+      = render partial: "questions", locals: { question: question }
+    .contents-page
+      = paginate(@questions)

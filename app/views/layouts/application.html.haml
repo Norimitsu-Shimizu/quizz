@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title Quizz
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header.header
+      .header__left
+        = link_to "Quizzzzz", root_path, class: "header__left__text"
+      - if user_signed_in?
+        .header__right
+          %ul.header__right__list
+            %li.header__right__list__sign
+              .header__right__list__sign__name= current_user.name
+            %li.header__right__list__sign= link_to "クイズ一覧", questions_path, class: "header__right__list__sign__btn"
+            %li.header__right__list__sign= link_to "クイズ作成", new_question_path, class: "header__right__list__sign__btn"
+            %li.header__right__list__sign= link_to "マイページ", user_path(current_user.id), class: "header__right__list__sign__btn"
+            %li.header__right__list__sign= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right__list__sign__btn"
+      - else
+        .header__right
+          %ul.header__right__list
+            %li.header__right__list__sign= link_to "ログイン", new_user_session_path, class: "header__right__list__sign__btn"
+            %li.header__right__list__sign= link_to "新規登録", new_user_registration_path, class: "header__right__list__sign__btn"
+    = yield
