@@ -11,10 +11,14 @@
           .contents-create__field__text
             = f.text_field :title, class: "contents-create__field__text__t"
             %br/
-          - 3.times do |times|
             = f.fields_for :answers, "answers[]" do |a|
               .contents-create__field__label
-                = a.label :"選択肢#{times+1}"
+                - if a.index == 0
+                  = a.label :"選択肢1"
+                - elsif a.index == 1
+                  = a.label :"選択肢2"
+                - else
+                  = a.label :"選択肢3"
                 %br/
               .contents-create__field__input
                 .contents-create__field__input__text
@@ -26,7 +30,7 @@
           .contents-create__field__genre
             = f.label :"ジャンル", class: "contents-create__field__genre__label"
             %br/
-            = f.collection_select :genre_id, @genre, :id, :name, class: "contents-create__field__genre__g"
+            = f.collection_select :genre_id, Genre.all, :id, :name, class: "contents-create__field__genre__g"
           .contents-create__field__btn
             = f.submit "作成する", class:"contents-create__field__btn__b"
       .contents-create__link

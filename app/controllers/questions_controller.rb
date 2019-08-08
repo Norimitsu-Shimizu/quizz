@@ -11,12 +11,17 @@ class QuestionsController < ApplicationController
   def new
     @question = Question.new
     @genre = Genre.all
-    @question.answers.build
+    3.times{@question.answers.build}
+    @num = 0
   end
 
   def create
-    question = current_user.questions.create(question_params)
-    redirect_to new_question_path
+    @question = Question.new(question_params)
+    if @question.save
+      redirect_to questions_path
+    else
+      render '/questions/new'
+    end
   end
 
   def show
@@ -27,7 +32,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:title, :genre_id, answers_attributes: [:id, :answer, :question_id, :correct])
+    params.require(:question).permit(:title, :genre_id, answers_attributes: [:id, :answer, :question_id, :correct]).merge(user_id: current_user.id)
   end
 
 end
