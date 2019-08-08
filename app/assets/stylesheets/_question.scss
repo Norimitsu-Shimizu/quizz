@@ -8,7 +8,7 @@
     text-align: center;
 
     .contents-create {
-
+      
       &__title {
         width: 150px;
         margin-left: 420px;
@@ -28,8 +28,12 @@
         &__text {
             
           &__t{
-            padding: 10px 200px;
+            padding: 10px 20px;
             box-shadow: 0 2px 3px 0 #ddd;
+            display: inline-block;
+            width: 600px;
+            box-sizing: border-box;
+
           }
           
         }
@@ -39,9 +43,11 @@
             display: inline-block;
             margin-left: 160px;
             &__t{
-              padding: 10px 200px;
+              padding: 10px 20px;
               box-shadow: 0 2px 3px 0 #ddd;
               display: inline-block;
+              width: 600px;
+              box-sizing: border-box;
             }
             
           }
