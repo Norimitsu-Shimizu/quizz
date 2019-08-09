@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:new, :create]
+
   def top
   end
 
@@ -12,7 +14,6 @@ class QuestionsController < ApplicationController
     @question = Question.new
     @genre = Genre.all
     3.times{@question.answers.build}
-    @num = 0
   end
 
   def create
