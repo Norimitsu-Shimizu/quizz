@@ -10,7 +10,7 @@
     .question__answer
       - @answers.each do |answer|
         .question__answer__ans{ data: "#{answer.correct}"}
-          = answer.answer
+          = link_to answer.answer, answer_path(id: answer.id), method: :patch, class: "question__answer__ans__experience"
       .question__answer__bg
       .question__answer__icon
     .question__footer

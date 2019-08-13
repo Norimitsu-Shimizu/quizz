@@ -38,6 +38,17 @@
       border-bottom: solid 6px #aac5de;
       border-radius: 9px;
       cursor: pointer;
+      &__experience {
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        display: inline-block;
+      }
+
+      &__experience:hover {
+        color:  #eef2f5;
+        background: #5989cf;  
+      }
     }
 
     &__ans:hover {

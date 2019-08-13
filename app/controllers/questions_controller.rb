@@ -30,6 +30,9 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.shuffle
   end
 
+  def update
+  end
+
   private
 
   def question_params
