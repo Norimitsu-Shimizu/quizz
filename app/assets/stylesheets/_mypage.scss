@@ -29,9 +29,14 @@
 
     &__q {
       text-decoration: none;
-      width: 700px;
+      width: 100%;
+      display: inline-block;
+      color: black;
     }
-
+    &__q:hover{
+      color: white ;
+      background:  #5bb7ae;  
+    }
     
   }
   &__questions:hover {

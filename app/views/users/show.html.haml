@@ -3,6 +3,10 @@
     .user-content__name
       = @user.name
     .user-content__index
+      %h1 正答数
+    .user-content__questions
+      = @user.experience
+    .user-content__index
       %h1 作成したクイズ一覧
     - @questions.each do |question|
       .user-content__questions
