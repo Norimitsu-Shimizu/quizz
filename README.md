@@ -1,6 +1,12 @@
-# README
+<img src="https://img.shields.io/github/languages/code-size/Norimitsu-Shimizu/quizz">
+<img src="https://img.shields.io/github/languages/top/Norimitsu-Shimizu/quizz">
 
-## quizz
+# quizz
+
+<img width="1360" alt="スクリーンショット 2019-08-07 13 22 56" src="https://user-images.githubusercontent.com/50897909/63013772-f930b900-bec7-11e9-8629-cf6b644e072c.png">
+
+quizz https://grownquiz.herokuapp.com/
+
 クイズに答えて自分の知識のレベルを上げよう!
 自分でクイズを作ることもできるよ!
 
@@ -20,6 +26,10 @@
 4.問題作成ページでは問題を作成することができます
 
 ## 問題作成のやり方
+
+<img width="1259" alt="スクリーンショット 2019-08-14 18 47 32" src="https://user-images.githubusercontent.com/50897909/63013888-3eed8180-bec8-11e9-8731-a51b1c80338e.png">
+
+
 1.問題作成ページは問題フォームと答えのフォームが3つ、答えに対応する正解フォーム、ジャンル選択があり
   ます。
 
@@ -45,9 +55,12 @@
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |encrypted_password|string|null: false|
+|experience|integer|------|
+|level_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :questions
+- belogs_to :level
 
 ## questionsテーブル
 |Column|Type|Option|
@@ -79,3 +92,11 @@
 ### Associaton
 - has_many :questions
 
+## levelsテーブル
+|Column|Type|Option|
+|------|----|------|
+|level|integer|null: false|
+|count|integer|null:false|
+
+### Association
+- has_many :users
