@@ -13,6 +13,8 @@ quizz https://grownquiz.herokuapp.com/
 ## purpose
 クイズを解くことで学習する楽しみを体験して、学習意欲を高めていきます。
 
+
+
 ## 使い方
 1.ユーザー登録を行います。(ユーザー登録をしなくてもクイズに挑戦することはできます。)
 
@@ -24,6 +26,8 @@ quizz https://grownquiz.herokuapp.com/
 
 
 4.問題作成ページでは問題を作成することができます
+
+
 
 ## 問題作成のやり方
 
@@ -47,6 +51,8 @@ quizz https://grownquiz.herokuapp.com/
 
 
 6.1~5までを終えた後、作成するボタンを押すことで問題作成が完了します。
+
+
 
 ## usersテーブル
 |Column|Type|Option|
