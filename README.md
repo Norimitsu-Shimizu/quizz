@@ -1,5 +1,5 @@
-<img src="https://img.shields.io/github/languages/code-size/Norimitsu-Shimizu/quizz">
-<img src="https://img.shields.io/github/languages/top/Norimitsu-Shimizu/quizz">
+<a href="https://img.shields.io/github/languages/code-size/Norimitsu-Shimizu/quizz"><img src="https://img.shields.io/github/languages/code-size/Norimitsu-Shimizu/quizz"></a>
+<a href="https://img.shields.io/github/languages/top/Norimitsu-Shimizu/quizz"><img src="https://img.shields.io/github/languages/top/Norimitsu-Shimizu/quizz"></a>
 
 # quizz
 
