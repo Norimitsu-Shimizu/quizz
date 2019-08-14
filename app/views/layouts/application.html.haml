@@ -15,6 +15,8 @@
         .header__right
           %ul.header__right__list
             %li.header__right__list__sign
+              .header__right__list__sign__name= "Lv.#{current_user.level_id}"
+            %li.header__right__list__sign
               .header__right__list__sign__name= current_user.name
             %li.header__right__list__sign= link_to "クイズ一覧", questions_path, class: "header__right__list__sign__btn"
             %li.header__right__list__sign= link_to "クイズ作成", new_question_path, class: "header__right__list__sign__btn"
