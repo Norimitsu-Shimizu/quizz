@@ -32,5 +32,6 @@
             %br/
           .field-input
             = f.password_field :password_confirmation, autocomplete: "new-password"
+          = f.hidden_field :level_id, value: 1
         .actions
           = f.submit "アカウントを作成する", class: "btn"
