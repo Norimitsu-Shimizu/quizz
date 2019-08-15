@@ -42,6 +42,14 @@ class QuestionsController < ApplicationController
     @questions = question_ids.map {|id| User.find(id)}
   end
 
+  def search
+    @questions = Question.search(params[:search])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
 
   def question_params

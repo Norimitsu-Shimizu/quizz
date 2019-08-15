@@ -1,0 +1,12 @@
+.wrapper
+  .search-content
+    .search-content__space
+    .search-content__count
+      = "#{params[:search]}を含む問題が#{@questions.count}件あります"
+    - @questions.each do |question|
+      .search-content__title
+        =link_to question.title, question_path(question.id), class: "search-content__title__link"
+
+
+    
+    

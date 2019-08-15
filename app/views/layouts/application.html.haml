@@ -1,12 +1,14 @@
 !!!
 %html
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
     %title Quizz
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{crossorigin: 'anonymous', href: 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity: 'sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', rel: 'stylesheet'}
+
   %body
     %header.header
       .header__left
@@ -14,6 +16,12 @@
       - if user_signed_in?
         .header__right
           %ul.header__right__list
+            %li.header__right__list__sign
+              .header__right__list__sign__search
+                = form_tag(search_questions_path, method: 'get', class: "header__right__list__sign__search__form") do
+                  = text_field_tag :search, '', class: "header__right__list__sign__search__form__tag"
+                  %input{type: "submit", class: "header__right__list__sign__search__form__tag__btn"}
+                    %i.fa.fa-search
             %li.header__right__list__sign
               .header__right__list__sign__name= "Lv.#{current_user.level_id}"
             %li.header__right__list__sign
