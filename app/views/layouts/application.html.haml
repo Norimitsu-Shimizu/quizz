@@ -19,7 +19,7 @@
             %li.header__right__list__sign
               .header__right__list__sign__search
                 = form_tag(search_questions_path, method: 'get', class: "header__right__list__sign__search__form") do
-                  = text_field_tag :search, '', class: "header__right__list__sign__search__form__tag"
+                  = text_field_tag :search, '', class: "header__right__list__sign__search__form__tag", placeholder: "キーワードを入力してください"
                   %input{type: "submit", class: "header__right__list__sign__search__form__tag__btn"}
                     %i.fa.fa-search
             %li.header__right__list__sign

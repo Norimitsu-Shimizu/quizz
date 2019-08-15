@@ -40,11 +40,12 @@ html {
                   &__tag {
                     background: #f5f5f5;
                     border-radius: 4px;
+                    width: 300px;
                     &__btn {
                       position: absolute;
                       opacity: 0;
                       width: 10px;
-                      left: 190px;
+                      left: 283px;
                       top: 28px;
                       z-index: 5;
                       cursor: pointer;
@@ -52,7 +53,7 @@ html {
                   }
                   .fa-search {
                     position: absolute;
-                    left: 187px;
+                    left: 280px;
                     top: 28px;
                     z-index: 4;
                   }  
