@@ -1,16 +1,17 @@
 <a href="https://img.shields.io/github/languages/code-size/Norimitsu-Shimizu/quizz"><img src="https://img.shields.io/github/languages/code-size/Norimitsu-Shimizu/quizz"></a>
 <a href="https://img.shields.io/github/languages/top/Norimitsu-Shimizu/quizz"><img src="https://img.shields.io/github/languages/top/Norimitsu-Shimizu/quizz"></a>
 
-# quizz
+# Quizz
 
-<img width="1360" alt="スクリーンショット 2019-08-07 13 22 56" src="https://user-images.githubusercontent.com/50897909/63013772-f930b900-bec7-11e9-8629-cf6b644e072c.png">
+<img width="1363" alt="スクリーンショット 2019-08-15 12 23 42" src="https://user-images.githubusercontent.com/50897909/63076071-d4dbe780-bf6e-11e9-852d-e6440a53d1c6.png">
 
-quizz https://grownquiz.herokuapp.com/
+
+https://grownquiz.herokuapp.com/
 
 クイズに答えて自分の知識のレベルを上げよう!
 自分でクイズを作ることもできるよ!
 
-## purpose
+## Purpose
 クイズを解くことで学習する楽しみを体験して、学習意欲を高めていきます。
 
 
@@ -25,7 +26,7 @@ quizz https://grownquiz.herokuapp.com/
 3.問題形式は3択形式になっています。
 
 
-4.問題作成ページでは問題を作成することができます
+4.問題作成ページでは問題を作成することができます。
 
 
 
@@ -34,8 +35,7 @@ quizz https://grownquiz.herokuapp.com/
 <img width="1259" alt="スクリーンショット 2019-08-14 18 47 32" src="https://user-images.githubusercontent.com/50897909/63013888-3eed8180-bec8-11e9-8731-a51b1c80338e.png">
 
 
-1.問題作成ページは問題フォームと答えのフォームが3つ、答えに対応する正解フォーム、ジャンル選択があり
-  ます。
+1.問題作成ページは問題フォームと答えのフォームが3つ、答えに対応する正解フォーム、ジャンル選択があります。
 
 
 2.問題フォームに問題を入力します。
@@ -102,7 +102,7 @@ quizz https://grownquiz.herokuapp.com/
 |Column|Type|Option|
 |------|----|------|
 |level|integer|null: false|
-|count|integer|null:false|
+|count|integer|null: false|
 
 ### Association
 - has_many :users
