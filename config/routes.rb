@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :new, :create, :show, :edit, :update] do
     collection do
       get 'ranking'
+      get 'search'
     end
   end
   resources :answers, only: [:update]

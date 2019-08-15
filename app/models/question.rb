@@ -8,5 +8,10 @@ class Question < ApplicationRecord
   validates :title, presence: true
   validates :user_id, presence: true
   validates :genre_id, presence: true
+
+  def self.search(search)
+    return Question.all unless search
+    Question.where(['title LIKE ?', "%#{search}%"])
+  end
   
 end
