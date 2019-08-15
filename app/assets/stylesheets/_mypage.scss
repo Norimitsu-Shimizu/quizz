@@ -43,4 +43,31 @@
     color: white ;
     background:  #5bb7ae;
   }
+
+  &__ranking {
+    width: 700px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    padding: 0.5em 1em;
+    background: #f4f4f4;
+    border-left: solid 6px #2b8ae9;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+    transition: .4s;
+
+    &__link {
+      text-decoration: none;
+      width: 100%;
+      display: inline-block;
+      color: black;
+    }
+    &__link:hover{
+      color: white ;
+      background:  #2b8ae9;  
+    }
+    
+  }
+  &__ranking:hover {
+    color: white ;
+    background:  #2b8ae9;
+  }
 }

@@ -30,7 +30,16 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.shuffle
   end
 
+  def edit
+  end
+
   def update
+  end
+
+  def ranking
+    @users = User.order("level_id DESC").limit(10)
+    question_ids = Question.group(:user_id).order('count_user_id').limit(10).count(:user_id).keys
+    @questions = question_ids.map {|id| User.find(id)}
   end
 
   private

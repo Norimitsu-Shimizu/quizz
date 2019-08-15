@@ -21,6 +21,7 @@
             %li.header__right__list__sign= link_to "クイズ一覧", questions_path, class: "header__right__list__sign__btn"
             %li.header__right__list__sign= link_to "クイズ作成", new_question_path, class: "header__right__list__sign__btn"
             %li.header__right__list__sign= link_to "マイページ", user_path(current_user.id), class: "header__right__list__sign__btn"
+            %li.header__right__list__sign= link_to "ランキング", ranking_questions_path, class: "header__right__list__sign__btn"
             %li.header__right__list__sign= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right__list__sign__btn"
       - else
         .header__right

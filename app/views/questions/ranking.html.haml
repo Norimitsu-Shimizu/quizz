@@ -1,0 +1,21 @@
+.wrapper
+  .user-content
+    .user-content__name
+    .user-content__index
+      %h1 レベルランキング
+    - @users.each.with_index(1) do |user, i|
+      - if user.id == current_user.id
+        .user-content__ranking
+          = link_to "#{i}位 #{user.name}", user_path(user.id), class: "user-content__ranking__link"
+      - else
+        .user-content__questions
+          = link_to "#{i}位 #{user.name}", user_path(user.id), class: "user-content__questions__q"
+    .user-content__index
+      %h1 投稿数ランキング
+    - @questions.each.with_index(1) do |user, i|
+      - if user.id == current_user.id
+        .user-content__ranking
+          = link_to "#{i}位 #{user.name}", user_path(user.id), class: "user-content__ranking__link"
+      - else
+        .user-content__questions
+          = link_to "#{i}位 #{user.name}", user_path(user.id), class: "user-content__questions__q"
