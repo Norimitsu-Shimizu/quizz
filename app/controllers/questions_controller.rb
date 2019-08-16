@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @genre = Genre.all
+    @genres = Genre.all
     @questions = Question.order("created_at DESC").page(params[:page]).per(5)
   end
 
@@ -51,6 +51,12 @@ class QuestionsController < ApplicationController
   end
 
   def how_to
+  end
+
+  def genre
+    @genres = Genre.all
+    @genre = Genre.find(params[:id])
+    @questions = @genre.questions.order('created_at DESC').page(params[:pages]).per(5)
   end
 
   private
