@@ -8,6 +8,9 @@ Rails.application.routes.draw do
       get 'search'
       get 'how_to'
     end
+    member do
+      get 'genre'
+    end
   end
   resources :answers, only: [:update]
 end

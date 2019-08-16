@@ -19,41 +19,35 @@
     }
   }
 
+  .contents-title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    border: double 5px #2b8ae9;
+    padding: 10px 10px;
+  }
+
   .contents-new:hover{
     background: #2b8ae9;
     color: white;
   }
 
-  .contents-tab {
-    margin-top: 50px;
-    padding-bottom: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 700px;
-    margin: 0 auto;
-    &__select {
-      width: calc(100%/7);
-      height: 50px;
-      border-bottom: 3px solid #5ab4bd;
-      background-color: #d9d9d9;
-      line-height: 50px;
-      font-size: 16px;
-      text-align: center;
-      color: #565656;
-      display: block;
-      float: left;
-      text-align: center;
-      font-weight: bold;
-      transition: all 0.2s ease;
+  .contents-genre {
+    &__name {
+      margin-right: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 30px;
+      padding: 10px;
+      border: solid 1px #2b8ae9;
+      background: #2b8ae9;
+      border-radius: 15px;
     }
 
-    &__select:hover {
-      opacity: 0.75;
+    &__name:hover {
+      background: white;
+      color: #2b8ae9;
+      transition: .4s;
     }
-  }
-
-  input[name="id"] {
-    display: none;
   }
 
 
@@ -87,6 +81,48 @@
   .contents-page {
     margin-top: 30px;
     margin-bottom: 30px;
+    .pagination {
+      .page {
+        a {
+          text-decoration: none;
+          color: #2b8ae9;
+        }
+        a:hover {
+          transition: .4s;
+          color: #5bb7ae;
+        }
+      }
+      .current {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          transition: .4s;
+          color: #5bb7ae;
+        }
+      }
+      .next {
+        a {
+          text-decoration: none;
+          color: #2b8ae9;
+        }
+        a:hover {
+          transition: .4s;
+          color: #5bb7ae;
+        }
+      }
+      .last {
+        a {
+          text-decoration: none;
+          color: #2b8ae9;
+        }
+        a:hover {
+          transition: .4s;
+          color: #5bb7ae;
+        }
+      }
+    }
   }
 }
 
