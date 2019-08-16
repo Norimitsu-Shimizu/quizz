@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection do
       get 'ranking'
       get 'search'
+      get 'how_to'
     end
   end
   resources :answers, only: [:update]

@@ -1,0 +1,20 @@
+.how-to-content{
+  margin: 0 auto;
+  text-align: center;
+  &__name {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 20px;
+
+  }
+
+
+  &__index {
+    width: 200px;
+    margin-left: 280px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    padding: 0.5em 1em;
+    border: double 5px #4ec4d3;
+  }
+}
