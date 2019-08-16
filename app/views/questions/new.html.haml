@@ -1,5 +1,7 @@
 .wrapper
   .container
+    .contents-last
+      = link_to "問題作成のやり方", how_to_questions_path, class: "contents-last__first"
     .contents-create
       = form_for @question do |f|
         .contents-create__title

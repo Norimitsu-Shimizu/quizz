@@ -17,6 +17,7 @@
         = image_tag("歓喜のポーズ5.png", size: "300x300")
         = image_tag("バンザイ1.png", size: "300x300")
     .contents-last
+      = link_to "サイトの利用の仕方", how_to_questions_path, class: "contents-last__first"
       = link_to "スタート!", questions_path, class:"contents-last__first"
       - unless user_signed_in?
         = link_to "新規登録", new_user_registration_path, class:"contents-last__second"

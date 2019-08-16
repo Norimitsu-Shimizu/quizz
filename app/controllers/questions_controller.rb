@@ -50,6 +50,9 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def how_to
+  end
+
   private
 
   def question_params
