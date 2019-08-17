@@ -32,7 +32,8 @@ https://grownquiz.herokuapp.com/
 
 ## 問題作成のやり方
 
-<img width="1259" alt="スクリーンショット 2019-08-14 18 47 32" src="https://user-images.githubusercontent.com/50897909/63013888-3eed8180-bec8-11e9-8731-a51b1c80338e.png">
+<img width="1347" alt="スクリーンショット 2019-08-17 22 14 49" src="https://user-images.githubusercontent.com/50897909/63212256-7f553580-c13c-11e9-80ed-8a924ac2c6d2.png">
+
 
 
 1.問題作成ページは問題フォームと答えのフォームが3つ、答えに対応する正解フォーム、ジャンル選択があります。
@@ -61,34 +62,40 @@ https://grownquiz.herokuapp.com/
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |encrypted_password|string|null: false|
-|experience|integer|------|
-|level_id|integer|null: false, foreign_key: true|
+|experience|integer|-|
+|level_id|references|foreign_key: true|
 
 ### Association
 - has_many :questions
 - belogs_to :level
 
+- - - 
+
 ## questionsテーブル
 |Column|Type|Option|
 |------|----|------|
 |title|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|genre_id|integer|null: false, foreign_key: true|
+|user_id|references|foreign_key: true|
+|genre_id|references| foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :genre
 - has_many :answers
 
+- - - 
+
 ## answersテーブル
 |Column|Type|Option|
 |------|----|------|
 |answer|text|null: false|
-|correct|string|------|
-|question_id|integer|null: false, foreign_key: true|
+|correct|string|-|
+|question_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :question
+
+- - - 
 
 ## genresテーブル
 |Column|Type|Option|
@@ -97,6 +104,8 @@ https://grownquiz.herokuapp.com/
 
 ### Associaton
 - has_many :questions
+
+- - - 
 
 ## levelsテーブル
 |Column|Type|Option|
