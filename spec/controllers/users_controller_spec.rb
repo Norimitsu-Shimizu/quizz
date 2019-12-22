@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe UsersController do
-  let(:user) { create(:user) }
-
+  let(:level) { create(:level)}
+  let(:user) { create(:user, level_id: level.id) }
   before do
     login user
   end
