@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 describe QuestionsController do
-  let(:user) { create(:user) }
   let(:genre) { create(:genre) }
+  let(:level) { create(:level)}
+  let(:user) { create(:user, level_id: level.id) }
 
   describe '#index' do
     it "renders the :index template" do
